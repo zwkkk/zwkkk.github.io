@@ -7,7 +7,7 @@
 
 
 
-<title>恶性循环 | Wenkai</title>
+<title>行动者-观察者偏差 | Wenkai</title>
 
 
 
@@ -103,25 +103,87 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">恶性循环</h1>
+            <h1 class="post-title">行动者-观察者偏差</h1>
             
                 <div class="post-meta">
                     
 
                     
                         <span class="post-time">
-                        Date: <a href="#">October 10, 2019&nbsp;&nbsp;23:49:56</a>
+                        Date: <a href="#">October 12, 2019&nbsp;&nbsp;16:51:06</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/free-talk/">free talk</a>
+                                <a href="/categories/thinking/">thinking</a>
                             
                         </span>
                     
@@ -130,7 +192,21 @@
         </header>
 
         <div class="post-content">
-            <p>深陷泥潭，任何事情的成本都比你想的昂贵的多。好似在黑暗中使劲追逐自己心目中的光。但它太暗太暗了。代价太高太高啦。被规则束缚得死死的，你认为的自由亲手扼杀了你自由的权利，生活其实早已变得很糟很糟，你还骗自已其实不错。自由的认知，使你变成事事逃避的人，其实就是在逃避罢了。你有多久没有全身心干手头上现有的事情了。什么时候就该干什么事呀。<br>你真是无所畏惧。敏感而骄傲，压抑而逃避。<br>这一年，用不自由去换取今后的自由吧。</p>
+            <h1 id="什么是行动者-观察者偏差？"><a href="#什么是行动者-观察者偏差？" class="headerlink" title="什么是行动者-观察者偏差？"></a>什么是<strong>行动者-观察者偏差</strong>？</h1><p>​        行动者-观察者偏差(Actor observer bias)是指当我们作为观察者（观众）的时候，很容易会把他人的行为（行为发生者）归因于他人的人格特质，而当我们是行为发生者时，则很容易把我们行为的发生归因到情景因素中。(Jones &amp; Nisbett 1971)</p>
+<ul>
+<li>我们更容易将他人的行为归因于内部原因，而将我们自己的行为归因于外部原因。</li>
+<li>我们观察别人的行为时，倾向于指责别人的人品，而忽视情境的影响。</li>
+</ul>
+<h2 id="为何如此？"><a href="#为何如此？" class="headerlink" title="为何如此？"></a>为何如此？</h2><ol>
+<li>不同的信息来源</li>
+<li>不同注意视角</li>
+</ol>
+<p>​    <strong>行为反应的不同概念构架是行动者-观察者偏差出现的根源。</strong></p>
+<p>​    也就是说，行动者和观察者，在针对同一件事上，会<strong>选择不同的归因范式进行归因</strong>，例如行动者更了解自己内心，所以就会通过对外部世界进行推理并归因。</p>
+<h1 id><a href="#" class="headerlink" title="#"></a>#</h1><p>​     在讨论群体现象时，是不是一种行动者视角的可接受削弱。群体性的主观视角参差各异，综合而言提取其普遍意义在某种程度上规避了奇异值和特殊点。但提取本身又掺杂了观察者主观意识。</p>
+<p>​     大样本中体现出来的共性可否使行动者和观察者认知一致?</p>
+<p>​     小样本的特征观察又如何最大程度还原其真实行动者视角呢？</p>
+<p>​     又或者说，行动者认知和观察者认知都有局限性，行动者该如何向观察者表明自己？观察者又如何自然而然的与行动者思维同步？</p>
 
         </div>
 
@@ -150,10 +226,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2019/10/12/行动者-观察者偏差/">行动者-观察者偏差</a>
             
-            
-            <a class="next" rel="next" href="/2019/10/10/白名单/">白名单</a>
+            <a class="next" rel="next" href="/2019/10/10/恶性循环/">恶性循环</a>
             
         </section>
 
